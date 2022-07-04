@@ -9,6 +9,7 @@
 <body>
     <h1>인덱스 페이지 입니다.</h1>
     <p>p1</p>
+    <p>p2</p>
 
 </body>
 </html>
@@ -21,12 +22,30 @@ git remote -v 리모트 저장소
 push 
 오리진에다가 마스터 브런치를 올리겠다
 
+깃허브에 push 한 후에 또 하나의 커밋을 하니까, 
+Your branch is ahead of 'origin/master' by 1 commit.
+앞섰다.
+
+로컬에는 원격 저장소의 마스터를 추적하는 브런치가 있다. 바로 origin/master
+origin/master은 원격 저장소의 master와 같이 간다(추적/트래킹한다)
+원격 저장소 이름  origin 이니까
+
+git push origin master 하고 나면
+up to date with 맞췄다.
+
+git hub에 푸시한 것을 clone하면 상태를 그대로 내려받을 수 있다.(<-master <-origin/master)
+local repo 2 가 되는 것, 파일뿐만 아니라 커밋 전체를 복제한다. 그리고 수정해서 다시 푸쉬할 수 있다.
+
+git clone + https URL
+cd acorn 하면 바로 그 폴더 안으로 들어온 것
 
 
+local -> remote -> local 2
+     push       fetch(commit을 내려받는것)
 
+fetch 하고 나면, 오리진/마스터가 마스터보다 ahead(앞선다)
 
-
-
-
+원격 저장소에 새로운 커밋을 올리는 것은 푸쉬(1)
+원격 저장소에서 새로운 커밋을 받아오는 것은 페치(2)+머지(3)
 
 -->
